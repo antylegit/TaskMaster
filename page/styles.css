@@ -1,31 +1,91 @@
+/* SET VARIABLES */
+:root {
+	--backgroundColor: #202020;
+	--columnColor: #353535;
+	--cardColor: #505050;
+	--navbarColor: #353535;
+	--buttonColor: #505050;
+	--textColor: #ffffff;
+	--iconColor: #ffffff;
+}
+
+/* BODY */
 html,
 body {
 	margin: 0;
-	background-color: #202020;
+	background-color: var(--backgroundColor);
 	width: 100%;
 	height: 100%;
+	
+	font-family: Oswald;
+	color: var(--textColor);
+}
+h1 {
+	text-align: center;
 }
 .columns {
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
-	right: 20%;
+	right: 5%;
 	
 	margin: 60px;
 	float: left;
-	
-	background-color: red;
 }
-.navbar {
+.col-todo, .col-doing, .col-done {
 	position: absolute;
 	top: 0;
-	bottom: 0;
-	left: 80%;
+	
+	height: 100%;
+	width: 32%;
+	
+	background-color: var(--columnColor);
+	border-radius: 30px;
+}
+.col-todo {
+}
+.col-doing {
+	left: 34%;
+}
+.col-done {
 	right: 0;
+}
+.tasks {
+	background-color: red;
+	width: 84%;
+	position: absolute;
+	left: 8%;
+	height: 70%;
+}
+
+/* NAVBAR */
+.btn-settings {
+	width: 64px;
+	height: 64px;
+	margin: 0 16px 0 0;
+	float: right;
 	
-	margin: 60px 60px 60px 0;
-	float: left;
+	background-color: var(--navbarColor);
+	border-radius: 0 0 8px 8px;
+	transition: 75ms;
+}
+.icn-settings {
+	width: 32px;
+	height: 32px;
+	margin: 16px 0 0 16px;
 	
-	background-color: blue;
+	transition: 100ms;
+}
+.btn-settings:hover {
+	background-color: var(--buttonColor);
+	
+	transition: 75ms;
+}
+.btn-settings:hover .icn-settings {
+	width: 36px;
+	height: 36px;
+	margin: 14px 0 0 14px;
+	
+	transition: 100ms;
 }
